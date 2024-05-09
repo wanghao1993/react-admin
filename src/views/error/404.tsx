@@ -1,6 +1,6 @@
 import notFount from "@/assets/404.svg";
 import { Link } from "react-router-dom";
-import Icon from "@/components/Icon/index.tsx";
+import Icon from "@/components/Icon";
 export default function Error404Page() {
   return (
     <div id="error-page">
@@ -16,7 +16,7 @@ export default function Error404Page() {
       <div className="text-center flex justify-center text-xl text-[#1C3177]">
         <div>
           <Link to="/" className="border-b">
-            <Icon icon="rollback-outlined" iconSet="ant-design" />
+            <Icon icon="ant-design-home-outlined" />
             回到首页
           </Link>
         </div>

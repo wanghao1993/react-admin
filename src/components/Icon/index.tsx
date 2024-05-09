@@ -1,35 +1,16 @@
-import { useEffect, useState } from "react";
-
-interface IconProps {
-  iconSet?: string;
-  icon: string;
-  color?: string;
-  size?: number;
-  extraClass?: string;
-}
-const defaultConfig: IconProps = {
-  iconSet: "ant-design",
-  size: 18,
-  icon: "",
+/**
+ *
+ * @param icon icon的名称
+ * @returns
+ */
+const Icon = ({ icon = "", className = "", ...props }) => {
+  // 通过className传递额外的样式类
+  return (
+    <i
+      className={`i-${icon} ${className} inline-block relative top-[2px]`}
+      {...props}
+    ></i>
+  );
 };
 
-export default function Icon(props: IconProps) {
-  const [className, setClassName] = useState("");
-
-  const iconProps = { ...defaultConfig, ...props };
-  useEffect(() => {
-    let classStr = `i-${iconProps.iconSet}-${iconProps.icon} inline-block`;
-    if (iconProps.extraClass) {
-      classStr += ` ${iconProps.extraClass}`;
-    }
-    setClassName(classStr);
-  }, [iconProps]);
-  return (
-    <>
-      <span
-        style={{ fontSize: `${props.size}px`, color: props.color }}
-        className={className}
-      ></span>
-    </>
-  );
-}
+export default Icon;

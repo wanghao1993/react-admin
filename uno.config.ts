@@ -1,7 +1,7 @@
 // uno.config.ts
 import { defineConfig, presetAttributify, presetUno } from "unocss";
 import presetIcons from "@unocss/preset-icons";
-
+import { IconsSet } from "./src/components/Icon/icon";
 export default defineConfig({
   shortcuts: [
     ["wh-full", "w-full h-full"],
@@ -19,5 +19,15 @@ export default defineConfig({
       dark_bg: "var(--dark-bg)",
     },
   },
-  presets: [presetAttributify(), presetUno(), presetIcons()],
+  safelist: [...IconsSet],
+  presets: [
+    presetAttributify(),
+    presetUno(),
+    presetIcons({
+      collections: {
+        "ant-design": () =>
+          import("@iconify-json/ant-design").then((res) => res.icons),
+      },
+    }),
+  ],
 });
