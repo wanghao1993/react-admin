@@ -43,5 +43,7 @@ declare module "react-router-dom" {
     ignoreRoute?: boolean;
     // Hide path for children
     hidePathForChildren?: boolean;
+    // 重定向
+    redirect?: string;
   }
 }
