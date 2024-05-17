@@ -14,7 +14,6 @@ export default defineConfig({
     react(),
   ],
   resolve: {
-    extensions: [".tsx"],
     alias: [
       {
         find: "@",

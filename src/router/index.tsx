@@ -7,6 +7,5 @@ import { pagesRoute } from "./modules/pages";
 const route: AppRouteRecordRaw[] = [...homeRoute, ...pagesRoute];
 const list = getRoutes(route) as unknown as RouteObject[];
 
-console.log(list);
 export const routes = createBrowserRouter(list);
 export const routeRaw = list;
