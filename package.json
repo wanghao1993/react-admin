@@ -22,13 +22,15 @@
     }
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.1",
     "@unocss/reset": "^0.59.4",
     "alova": "^2.20.5",
     "antd": "^5.17.0",
     "lodash-es": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.23.0",
+    "zustand": "5.0.0-rc.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",

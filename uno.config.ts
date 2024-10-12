@@ -5,7 +5,8 @@ import { IconsSet } from "./src/components/Icon/icon";
 export default defineConfig({
   shortcuts: [
     ["wh-full", "w-full h-full"],
-    ["f-c-c", "flex justify-center items-center"],
+    ["flex-center", "flex justify-center items-center"],
+    ["flex-between", "flex justify-between items-center"],
     ["flex-col", "flex flex-col"],
     ["text-ellipsis", "truncate"],
     [
