@@ -1,0 +1,7 @@
+.icon {
+    @apply p-1 rounded 
+}
+
+.iconActive {
+    @apply  bg-primary text-white
+}

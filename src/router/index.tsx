@@ -1,7 +1,8 @@
-import { RouteObject, createBrowserRouter } from "react-router-dom";
+import type { RouteObject } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import { homeRoute } from "./modules/constants";
 import { getRoutes } from "./utils";
-import { AppRouteRecordRaw } from "./types";
+import type { AppRouteRecordRaw } from "./types";
 import { pagesRoute } from "./modules/pages";
 
 const route: AppRouteRecordRaw[] = [...homeRoute, ...pagesRoute];
